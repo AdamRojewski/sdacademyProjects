@@ -1,9 +1,9 @@
-package pl.sda.javastart;
+package pl.sda.javastart.day1;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-public class BigIntegerBigDecimal {
+public class BigIntegerBigDecimal { // BigDecimal uzywamy w przypadku np operacji pienieznych
     public static void main (String[] args) {
         BigInteger bI = new BigInteger("432235345435");
         BigInteger newBi = new BigInteger("24312412412");

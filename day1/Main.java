@@ -1,4 +1,4 @@
-package pl.sda.javastart;
+package pl.sda.javastart.day1;
 
 import com.oracle.xmlns.internal.webservices.jaxws_databinding.SoapBindingParameterStyle;
 import com.sun.tools.jdi.SocketAttachingConnector;
