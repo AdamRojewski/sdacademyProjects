@@ -12,8 +12,8 @@ public class ArraysExample {
         tab[3] = 4;
         tab[4] = 5;
 
-        int[] anotherTable = new int[]{1, 2, 3, 4, 6, 5, 8};
-        int[] emptyTable = new int[9];
+        int[] anotherTable = new int[]{1, 2, 3, 4, 5, 6, 7};
+        int[] emptyTable = new int[7];
 
         for (int i = 0; i < emptyTable.length; i++) {
             emptyTable[i] = i + 1;
@@ -26,6 +26,7 @@ public class ArraysExample {
 
         System.out.println(checkIfArraysAreSame(anotherTable, emptyTable));
         System.out.println(checkIfArraysAreSame(new int[]{1, 2, 3, 6}, new int[]{1, 2, 3, 6}));
+        System.out.println(createArray(10));
 
 
     }
@@ -52,7 +53,13 @@ public class ArraysExample {
         return table;
     }
 
-    public static int calculateDifferenceBetweenMinAndMax(int[] table) {
+    public static int calculateDifferenceBetweenMinAndMax(int[] entryTable) {
+        int[] tabofmINANDmAX = calculateMinAndMax(entryTable);
+
+        return Math.abs(tabofmINANDmAX[1] - tabofmINANDmAX[0]);
+    }
+
+    public static int[] calculateMinAndMax(int[] table) {
         int max = table[0];
         int min = table[0];
         for (int element : table) {
@@ -63,7 +70,8 @@ public class ArraysExample {
                 min = element;
             }
         }
-        return Math.abs(max - min);
+        int[] tabForMinMax = new int[]{min, max};
+        return tabForMinMax;
     }
 
     public static boolean checkIfArraysAreSame(int[] firstArray, int[] secondArray) {
@@ -72,11 +80,11 @@ public class ArraysExample {
         }
         for (int i = 0; i < firstArray.length; i++) {
             if (firstArray[i] != secondArray[i]) {
-                    return false;
-                }
+                return false;
             }
-            return true;
         }
+        return true;
+    }
 }
 
 
