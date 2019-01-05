@@ -148,16 +148,23 @@ public class ForsExample2 {
         } else return "0zl";
 
     }
-public static void prostokat (int wysokosc, int szerokosc){
-    for (int i = 0; i < szerokosc; i++){
-        System.out.print("X");
-    }
-    for (int i =0; i <=wysokosc; i++) {
-        System.out.println("X");
+
+    public static void prostokat(int wysokosc, int szerokosc) {
+        for (int i = 0; i < szerokosc; i++) {
+            System.out.print("X");
+        }
+        for (int i = 0; i <= wysokosc; i++) {
+            System.out.print("X");
+            for (int j = 0; j <= szerokosc - 2; j++) {
+                System.out.print(" ");
             }
-    for (int i = 0; i <= szerokosc; i++){
-        System.out.print("X");
-}
+            System.out.print("X");
+
+            System.out.println();
+        }
+        for (int i = 0; i <= szerokosc; i++) {
+            System.out.print("X");
+        }
 
     }
 }
