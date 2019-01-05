@@ -13,7 +13,11 @@ public class ForsExample2 {
         niepodzielnePrzez3(25);
         scenariusze("GR");
         silnia(6);
-
+        System.out.println(checkIfpaired(2, 2));
+        System.out.println(checkIfFirstAndSecondGivesThird(3, 2, 3));
+        System.out.println(checkIfBiggerThanZero(-1, 2));
+        System.out.println("Twoj mandat to " + policeman(40, true));
+        prostokat(5, 8);
     }
 
     public static void printNumbersInTree(int height) {
@@ -105,12 +109,64 @@ public class ForsExample2 {
         int silnia = 1;
         while (n > 1) {
             silnia = silnia * n;
-            n = n- 1;
+            n = n - 1;
 
         }
         System.out.println(silnia);
     }
+
+    public static boolean checkIfpaired(int a, int b) {
+
+        boolean result = a % 2 == 0 && b % 2 == 0;
+        return result;
+    }
+
+    public static boolean checkIfFirstAndSecondGivesThird(int a, int b, int sum) {
+        boolean result = a + b == sum;
+        return result;
+    }
+
+    public static boolean checkIfBiggerThanZero(int a, int b) {
+        boolean result = a > 0 || b > 0;
+        return result;
+    }
+
+    public static String policeman(int predkosc, boolean ismood) {
+
+        if (predkosc > 50 && predkosc <= 60 && !ismood) {
+            return "100zl";
+        } else if (predkosc > 50 && predkosc <= 65 && ismood) {
+            return "100zl";
+        } else if (predkosc > 60 && predkosc <= 70 && !ismood) {
+            return "200zl";
+        } else if (predkosc > 60 && predkosc <= 75 && ismood) {
+            return "200zl";
+        } else if (predkosc > 70 && !ismood) {
+            return "300zl";
+        } else if (predkosc > 75 && ismood) {
+            return "300zl";
+        } else return "0zl";
+
+    }
+public static void prostokat (int wysokosc, int szerokosc){
+    for (int i = 0; i < szerokosc; i++){
+        System.out.print("X");
+    }
+    for (int i =0; i <=wysokosc; i++) {
+        System.out.println("X");
+            }
+    for (int i = 0; i <= szerokosc; i++){
+        System.out.print("X");
 }
+
+    }
+}
+
+
+
+
+
+
 
 
 
