@@ -1,9 +1,5 @@
 package pl.sda.javastart.day4;
 
-import com.sun.tools.corba.se.idl.EnumGen;
-
-import java.util.Scanner;
-
 public class ForsExample2 {
     public static void main(String[] args) {
         printNumbersInTree(7);
@@ -18,6 +14,9 @@ public class ForsExample2 {
         System.out.println(checkIfBiggerThanZero(-1, 2));
         System.out.println("Twoj mandat to " + policeman(70, true));
         prostokat(5, 8);
+        potegowaniedo(2, 50);
+        tabliczkMnozenia(10);
+
     }
 
     public static void printNumbersInTree(int height) {
@@ -155,7 +154,7 @@ public class ForsExample2 {
         }
         System.out.println();
 
-        for (int i = 0; i < wysokosc; i++) {
+        for (int i = 0; i < wysokosc - 2; i++) {
             System.out.print("Y");
             for (int j = 0; j < szerokosc - 2; j++) {
                 System.out.print(" ");
@@ -167,10 +166,40 @@ public class ForsExample2 {
         for (int i = 0; i < szerokosc; i++) {
             System.out.print("N");
         }
+        System.out.println();
 
     }
 
+    public static void potegowaniedo(int start, int koniec) {
+        int potega = 1;
+        double result;
+        do {
+            result = (Math.pow(start, potega));
+            potega++;
+            System.out.println(result);
+        }
+        while (result <= koniec);
+    }
+
+    public static void tabliczkMnozenia(int size) {
+        System.out.format("      ");
+        for (int i = 1; i <= size; i++) {
+            System.out.format("%4d", i);
+        }
+        System.out.println();
+        System.out.println("-----------------------------------------------");
+
+        for (int i = 1; i <= size; i++) {
+            System.out.format("%4d |", i);
+            for (int j = 1; j <= size; j++) {
+                System.out.format("%4d", i * j);
+            }
+            System.out.println();
+        }
+    }
 }
+
+
 
 
 
