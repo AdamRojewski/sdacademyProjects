@@ -14,8 +14,9 @@ public class ForsExample2 {
         System.out.println(checkIfBiggerThanZero(-1, 2));
         System.out.println("Twoj mandat to " + policeman(70, true));
         prostokat(5, 8);
-        potegowaniedo(2, 50);
+        potegowanieDo(2, 50);
         tabliczkMnozenia(10);
+        connectArrays(new int[]{1, 2, 3}, new int[]{4, 5, 6});
 
     }
 
@@ -170,7 +171,7 @@ public class ForsExample2 {
 
     }
 
-    public static void potegowaniedo(int start, int koniec) {
+    public static void potegowanieDo(int start, int koniec) {
         int potega = 1;
         double result;
         do {
@@ -197,7 +198,18 @@ public class ForsExample2 {
             System.out.println();
         }
     }
+
+    public static int connectArrays(int[] sizeFirst, int[] sizeSecond) {
+        for (int i = 0; i < sizeFirst.length; i++) {
+        }
+        for (int i = 0; i < sizeSecond.length; i++) {
+        }
+
+    }
+
+
 }
+
 
 
 
