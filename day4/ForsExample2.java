@@ -13,10 +13,10 @@ public class ForsExample2 {
         niepodzielnePrzez3(25);
         scenariusze("GR");
         silnia(6);
-        System.out.println(checkIfpaired(2, 2));
+        System.out.println(checkIfpaired(2, 7));
         System.out.println(checkIfFirstAndSecondGivesThird(3, 2, 3));
         System.out.println(checkIfBiggerThanZero(-1, 2));
-        System.out.println("Twoj mandat to " + policeman(40, true));
+        System.out.println("Twoj mandat to " + policeman(70, true));
         prostokat(5, 8);
     }
 
@@ -153,20 +153,23 @@ public class ForsExample2 {
         for (int i = 0; i < szerokosc; i++) {
             System.out.print("X");
         }
-        for (int i = 0; i <= wysokosc; i++) {
-            System.out.print("X");
-            for (int j = 0; j <= szerokosc - 2; j++) {
+        System.out.println();
+
+        for (int i = 0; i < wysokosc; i++) {
+            System.out.print("Y");
+            for (int j = 0; j < szerokosc - 2; j++) {
                 System.out.print(" ");
             }
-            System.out.print("X");
+            System.out.print("Z");
 
             System.out.println();
         }
-        for (int i = 0; i <= szerokosc; i++) {
-            System.out.print("X");
+        for (int i = 0; i < szerokosc; i++) {
+            System.out.print("N");
         }
 
     }
+
 }
 
 
