@@ -1,4 +1,4 @@
-package pl.sda.javastart.day6;
+package pl.sda.javastart.day6.day6Homework;
 
 public class Point {
     private double x;
