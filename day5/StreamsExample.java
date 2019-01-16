@@ -13,6 +13,7 @@ public class StreamsExample {
     public static void main(String[] args) {
         firstStream();
         secondStream();
+        sortExample();
 
     }
 
@@ -34,7 +35,7 @@ public class StreamsExample {
                 .map(e -> e.trim())
                 .distinct()
                 .filter(e -> e.length() >= 4) // kazde "e" to obiekt typu String
-                .forEach(e -> System.out.println(e));
+                .forEach(e -> System.out.println(e)); // void nie zwraca, nie trzeba przypisywac do zmiennej
     }
 
     private static void secondStream() {
@@ -48,8 +49,29 @@ public class StreamsExample {
         String result = Arrays.stream(animals)
                 .filter(a -> StringUtils.isNotBlank(a)) // sprawdza czy nie jest blank / empty / null
                 .map(e -> e.trim())
-                .collect(Collectors.joining(","));
+                .collect(Collectors.joining(",")); // dlaczego tutaj nie dodal przecinka ?? (metoda zwracajaca Stringa - trzeba przypisac do zmiennej)
         System.out.println(result);
+        System.out.println();
 
+    }
+
+    private static void sortExample() {
+        String name1 = "Anna";
+        String name2 = "Ola";
+        System.out.println(name1.compareTo(name2));
+        System.out.println("Sortowanie alfabetyczne");
+        Arrays.stream(animals)
+                .filter(e -> StringUtils.isNotBlank(e))
+                .map(e -> e.trim())
+                .distinct()
+                .sorted((e, f) -> e.compareTo(f))
+                .forEach(e -> System.out.print(e + " "));
+        System.out.println("Sortowanie po dlugosci nazwy");
+        Arrays.stream(animals)
+                .filter(e -> StringUtils.isNotBlank(e))
+                .map(e -> e.trim())
+                .distinct()
+                .sorted((e, f) -> Integer.valueOf(e.length()).compareTo(Integer.valueOf(f.length())))
+                .forEach(e -> System.out.print(e + " "));
     }
 }

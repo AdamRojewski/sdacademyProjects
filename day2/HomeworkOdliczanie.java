@@ -33,7 +33,7 @@ public class HomeworkOdliczanie {
         System.out.println(hour + ":" + minute + " " + day + "." + month + "." + year);
         System.out.println((hour * 60) + minute);
         double wholeday = ((hour /24) *100); // hour / 24 * 100
-        System.out.format("%.15f%n", wholeday); // nie umiem dodac % na koncu, nie liczy jesli jest polnoc...
+        System.out.format("%.3f%n", wholeday); // nie umiem dodac % na koncu, nie liczy jesli jest polnoc...
         int leftMidnight = ((hour * 60 * 60) + (minute * 60));
         System.out.println(24 * 60 * 60 - leftMidnight);
         for (int x = 0; x < 4; ++x) ;

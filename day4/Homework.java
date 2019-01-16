@@ -36,8 +36,10 @@ public class Homework {
         avg = sum / howMany;
         System.out.println("Suma rowna sie " + sum + "\n" + "Srednia rowna sie " + avg);
         int[] tabForMinMax = ArraysExample.calculateMinAndMax(tabForNumbers);
-        System.out.println("Minimalna wartosc to " + tabForMinMax[0] + "\n" + "Maksymalna wartosc to " +tabForMinMax[1]);
+        System.out.println("Minimalna wartosc to " + tabForMinMax[0] + "\n" + "Maksymalna wartosc to " + tabForMinMax[1]);
 
 
     }
-}
+
+    }
+

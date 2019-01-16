@@ -7,7 +7,7 @@ public class TankObject {
         System.out.println(tank.getName());
         tank.setCapacity(60);
         System.out.println(tank.getCapacity());
-        tank.setFuelConsumption(12);
+        tank.setFuelConsumption(13);
         System.out.println(tank.getFuelConsumption());
         tank.setWeight(1000);
         System.out.println(tank.getWeight());

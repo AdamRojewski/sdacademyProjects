@@ -16,7 +16,7 @@ public class ForsExample2 {
         prostokat(5, 8);
         potegowanieDo(2, 50);
         tabliczkMnozenia(10);
-        System.out.println(addArrays(new int[7], new int[3]));
+     //   System.out.println(addArrays(new int[7], new int[3]));
     }
 
     public static void printNumbersInTree(int height) {
@@ -198,7 +198,7 @@ public class ForsExample2 {
         }
     }
 
-    public static int[] addArrays(int[] firstArray, int[] secondArray) {
+   /* public static int[] addArrays(int[] firstArray, int[] secondArray) {
         for (int i = 0; i < firstArray.length; i++) {
         }
         return firstArray;
@@ -208,7 +208,7 @@ public class ForsExample2 {
         return secondArray;
 
     }
-
+*/
 
 }
 
