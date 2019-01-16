@@ -8,4 +8,5 @@ public abstract class Figure {
     public abstract double getCircuit();
 
     public abstract Point[] getEdges();
+
 }
